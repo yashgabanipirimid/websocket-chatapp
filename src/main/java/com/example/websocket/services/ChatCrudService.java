@@ -33,10 +33,10 @@ public class ChatCrudService {
         this.messageRepo = messageRepo;
     }
 
-    public User login(String username) {
-        String normalized = username.toLowerCase();
-        return userRepo.findByUsername(normalized).orElseGet(() -> userRepo.save(new User(normalized, normalized + "@chat.com")));
-    }
+//    public User login(String username) {
+//        String normalized = username.toLowerCase();
+//        return userRepo.findByUsername(normalized).orElseGet(() -> userRepo.save(new User(normalized, normalized + "@chat.com")));
+//    }
 
     public Conversation createOneToOneChat(String user1, String user2) {
 
