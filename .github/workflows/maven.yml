@@ -28,7 +28,13 @@ jobs:
       with: 
         username: ${{secrets.DOCKERHUB_USERNAME}}
         password: ${{secrets.DOCKERHUB_TOKEN}}
-    - name: Build docker image
-      run: docker build -t yashgabani845/chatapp-gtp:latest .
-    - name: Push Docker image
-      run: docker push yashgabani845/chatapp-gtp:latest
+    - name: Build and Push Docker Image
+      uses: docker/build-push-action@v6
+      with: 
+        context: .
+        file: ./Dockerfile
+        push: true
+        tags:  yashgabani845/chatapp-gtp:latest
+            
+      
+    
