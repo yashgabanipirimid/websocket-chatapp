@@ -18,9 +18,9 @@ public class UserController {
         this.chatCrudService = chatCrudService;
     }
 
-    @PostMapping("/login")
-    public User login(@RequestParam String username) {
-        return chatCrudService.login(username);
-    }
+//    @PostMapping("/login")
+//    public User login(@RequestParam String username) {
+//        return chatCrudService.login(username);
+//    }
 
 }
